@@ -2,16 +2,13 @@ package me.study.designpattens.singleton;
 
 public class Settings {
 
-    private static Settings instance;
+    private static final Settings instance = new Settings();
 
     private Settings() {
 
     }
 
-    public static synchronized Settings getInstance() {
-        if (instance == null) {
-            instance = new Settings();
-        }
+    public static Settings getInstance() {
         return instance;
     }
 }
