@@ -1,10 +1,10 @@
-package me.study.designpattens.singleton;
+package me.study.designpatterns._01_creational_patterns._01_singleton;
 
 import java.io.*;
 
 public class App {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Settings settings1 = Settings.getInstance();
+         Settings settings1 = Settings.getInstance();
 
         try (ObjectOutput out = new ObjectOutputStream(new FileOutputStream("settings.obj"))) {
             out.writeObject(settings1);
